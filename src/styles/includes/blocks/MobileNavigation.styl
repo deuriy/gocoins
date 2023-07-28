@@ -1,0 +1,32 @@
+.MobileNavigation
+	position fixed
+	z-index 1000
+	// inset 0
+	width 100%
+	height 100%
+	top 0
+	right -100%
+	padding 92px 26px
+	background var(--orange)
+	overflow auto
+	// opacity 0
+	// visibility hidden
+	@extend .Transition
+	
+	&_closeBtn
+		position absolute
+		top 6px
+		right 10px
+		display inline-flex
+		justify-content center
+		align-items center
+		padding 10px
+		border none
+		outline none
+		background none
+		cursor pointer
+	
+	&-visible
+		right 0
+		// opacity 1
+		// visibility visible

@@ -1,0 +1,53 @@
+.Select
+	// width 53px
+	// height 22px
+	border none
+	background #D9D9D9
+	border-radius 5px
+	
+	&_iconWrapper
+		display flex
+		align-items center
+		gap 5px
+		height 22px
+		color var(--black)
+	
+	&_icon
+		width 24px
+	
+	&_text
+		font-size 10px
+	
+	&-languages
+		width 53px
+	
+	&-currencies
+		width 77px
+
+.select2-container--custom
+	.select2-selection--single
+		display flex
+		align-items center
+		justify-content space-between
+		height 22px
+		
+		.select2-selection__rendered
+			padding-right 4px
+			padding-left 4px
+		
+		.select2-selection__arrow
+			// position relative
+			display flex
+			margin-right 4px
+			
+			b
+				width 10px
+				height 6px
+				background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath fill='%23858383' d='M5 6 .67 0h8.66L5 6Z'/%3E%3C/svg%3E") center no-repeat
+	
+	.select2-dropdown--below
+		border-top-right-radius 5px
+		border-top-left-radius 5px
+		
+	.select2-results__option
+		padding 4px

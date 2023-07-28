@@ -1,0 +1,27 @@
+.MobileMenu
+	&_list
+		list-style none
+	
+	&_item
+		color #333
+		font-weight 300
+		font-size 15px
+		line-height normal
+		
+		& + .MobileMenu_item
+			margin-top 11px
+	
+	&_link
+		display block
+		padding 5px 20px
+		border-radius 5px
+		background #FEAE0D
+		color #333
+		text-decoration none
+		@extend .Transition
+		
+		&:hover
+			background darken(#FEAE0D, 4)
+		
+		&-active
+			font-weight 700

@@ -1,0 +1,30 @@
+.Tabs
+	border-radius 15px
+	background #171C29
+	
+	&_list
+		list-style none
+		display flex
+		
+	&_item
+		flex 1 0 0
+		padding 6px 12px
+		background #141622
+		color var(--grey)
+		font-weight 700
+		font-size 12px
+		line-height normal
+		font-family var(--open-sans)
+		text-align center
+		text-transform uppercase
+		cursor pointer
+		@extend .Transition
+		
+		&:hover,
+		&-active
+			background #171C29
+			color var(--white)
+		
+	&_content
+		display none
+		padding 24px 11px 18px

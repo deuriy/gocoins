@@ -1,0 +1,32 @@
+.BtnOrange
+	display inline-flex
+	justify-content center
+	align-items center
+	padding 6px 22px
+	border none
+	outline none
+	background var(--orange)
+	color var(--white)
+	border-radius 20px
+	font-size 12px
+	font-family var(--base-font)
+	text-transform uppercase
+	text-decoration none
+	cursor pointer
+	@extend .Transition
+	
+	&:hover
+		background #E49C08
+	
+	&-heroSection
+		font-size 15px
+	
+	&-salesForm
+		padding-right 11px
+		padding-left 11px
+	
+	&-offerSection
+		padding-right 14px
+		padding-left 14px
+		text-transform none
+		font-family var(--open-sans)
