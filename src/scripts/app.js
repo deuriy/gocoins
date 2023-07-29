@@ -68,6 +68,18 @@ $(() => {
     }
   });
 
+  const infoSwiper = new Swiper('.InfoSwiper', {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+
+    breakpoints: {
+      768: {
+        spaceBetween: 36
+      }
+    }
+  });
+
   const advantagesSwiper = new Swiper('.AdvantagesSwiper', {
     slidesPerView: 'auto',
     spaceBetween: 30,

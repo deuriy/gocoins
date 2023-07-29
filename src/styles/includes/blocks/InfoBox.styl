@@ -1,0 +1,60 @@
+.InfoBox
+	display grid
+	grid-template-columns 100%
+	grid-template-rows auto 60px 1fr
+	width 181px
+	max-width 100%
+	padding 24px 20px
+	border-radius 10px
+	background #E8E3E3
+	
+	@media $smPlus
+		grid-template-rows auto auto 1fr
+		width 222px
+		padding 24px 15px 27px
+	
+	@media $mdPlus
+		width 354px
+		padding 20px 27px 29px
+	
+	&_imgWrapper
+		margin-bottom 6px
+		text-align center
+		
+		@media $smPlus
+			margin-bottom 16px
+	
+	&_img
+		height 91px
+		
+		@media $smPlus
+			height 106px
+		
+		@media $mdPlus
+			height auto
+	
+	&_title
+		margin-bottom 17px
+		font-size 20px
+		text-align center
+		color #333
+		
+		@media $smPlus
+			margin-bottom 14px
+		
+		@media $mdPlus
+			font-size 32px
+			// text-align left
+			// line-height normal
+	
+	&_text
+		color #717375
+		font-size 17px
+		
+		@media $smPlus
+			margin-right 2px
+			margin-left 2px
+		
+		@media $mdPlus
+			width 240px
+			font-size 20px

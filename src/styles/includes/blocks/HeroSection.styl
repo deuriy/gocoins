@@ -1,6 +1,9 @@
 .HeroSection
 	padding 24px 0
-	background var(--black) url('../img/bitcoin.jpg') calc(50% + 20px) 57px / 582px no-repeat
+	background-color var(--black)
+	background-position calc(50% + 20px) 57px
+	background-size 582px
+	background-repeat no-repeat
 	
 	@media $smPlus
 		padding 34px 29px 45px
@@ -19,7 +22,6 @@
 		font-weight 700
 		font-size 25px
 		line-height 1.2
-		text-transform uppercase
 		
 		@media $smPlus
 			width 355px
@@ -31,6 +33,9 @@
 			margin-bottom 15px
 			font-size 40px
 			line-height 1
+		
+		&-uppercase
+			text-transform uppercase
 	
 	&_desc,
 	&_note
@@ -77,3 +82,14 @@
 	&_btnWrapper
 		@media $xs
 			text-align center
+	
+	&-exchange
+		.HeroSection_desc
+			@media $xs
+				width 155px
+				margin-bottom 11px
+		
+		.HeroSection_note
+			@media $xs
+				width 170px
+				margin-bottom 11px

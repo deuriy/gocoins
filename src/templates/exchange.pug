@@ -1,0 +1,139 @@
+extends layouts/base
+
+block content
+	.HeroSection.HeroSection-exchange(style="background-image: url('../img/exchange.jpg')")
+		.Container
+			h1.HeroSection_title Как обменять криптовалюту?
+			.HeroSection_desc
+				p Выберите надежный обмен для ваших крипто-валютных операций. Мы позволяем вам покупать и продавать крипто-валюту с минимально возможной комиссией.
+			.HeroSection_note
+				p Безопасная покупка/продажа: #[br]Покупка USDT   -  2,5-3 % Продажа USDT  -  2 % Биткоин  -  3,5-4%
+			.HeroSection_btnWrapper
+				a(href="#").BtnOrange.BtnOrange-heroSection Оставить заявку
+	.InfoSection
+		.Container
+			.InfoSwiper.swiper-container.InfoSection_swiper.hidden-mdPlus
+				.swiper-wrapper.InfoSwiper_slides
+					.swiper-slide.InfoSwiper_slide
+						.InfoBox.InfoSwiper_item
+							.InfoBox_imgWrapper
+								img(src="/img/infoblocks/calc.png" alt="Рассчитать").InfoBox_img
+							h3.InfoBox_title Рассчитать
+							.InfoBox_text
+								p Введите сумму, которые вы хотите обменять на калькуляторе ниже
+					.swiper-slide.InfoSwiper_slide
+						.InfoBox.InfoSwiper_item
+							.InfoBox_imgWrapper
+								img(src="/img/infoblocks/people.png" alt="Свяжитесь с нами").InfoBox_img
+							h3.InfoBox_title Свяжитесь с нами
+							.InfoBox_text
+								p Свяжитесь с нами через форму заявки или по номеру телефона. Viber, WhatsApp, Telegram.
+					.swiper-slide.InfoSwiper_slide
+						.InfoBox.InfoSwiper_item
+							.InfoBox_imgWrapper
+								img(src="/img/infoblocks/people.png" alt="Покупка и продажа").InfoBox_img
+							h3.InfoBox_title Покупка и продажа
+							.InfoBox_text
+								p Переводы из Черногории в страны: РФ, ОАЭ, Украина, Италия, Чехия, Германия. Комиссия 3-6 %.
+			.InfoSection_items.hidden-smMinus
+				.InfoBox.InfoSection_item
+					.InfoBox_imgWrapper
+						img(src="/img/infoblocks/calc.png" alt="Рассчитать").InfoBox_img
+					h3.InfoBox_title Рассчитать
+					.InfoBox_text
+						p Введите сумму, которые вы хотите обменять на калькуляторе ниже
+				.InfoBox.InfoSection_item
+					.InfoBox_imgWrapper
+						img(src="/img/infoblocks/people.png" alt="Свяжитесь с нами").InfoBox_img
+					h3.InfoBox_title Свяжитесь с нами
+					.InfoBox_text
+						p Свяжитесь с нами через форму заявки или по номеру телефона. Viber, WhatsApp, Telegram.
+				.InfoBox.InfoSection_item
+					.InfoBox_imgWrapper
+						img(src="/img/infoblocks/people.png" alt="Покупка и продажа").InfoBox_img
+					h3.InfoBox_title Покупка и продажа
+					.InfoBox_text
+						p Переводы из Черногории в страны: РФ, ОАЭ, Украина, Италия, Чехия, Германия. Комиссия 3-6 %.
+	.ExchangeRateSection
+		.Container.ExchangeRateSection_container
+			.ExchangeRateSection_text
+				p Актуальный курс #[br]обмена в нашем #[br]Telegram канале
+			a(href="#").BtnBlue.BtnBlue-subscribe.ExchangeRateSection_btn Подписаться
+	.SalesSection
+		.Container
+			.SalesSection_inner
+				.Tabs
+					ul.Tabs_list
+						li.Tabs_item.Tabs_item-active Купить
+						li.Tabs_item Продать
+					.Tabs_container
+						.Tabs_content(style="display: block;")
+							form(action="#").SalesForm
+								.SalesForm_items
+									.SalesForm_item
+										label(for="purchase_amount").SalesForm_label Я хочу заплатить
+										.SalesForm_itemWrapper
+											input(type="number" name="sum" id="purchase_amount" value="").SalesForm_text
+											.SalesForm_selectWrapper
+												select(name="purchase_currency" id="purchase_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+													option
+													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+									.SalesForm_item
+										label(for="purchase_result_amount").SalesForm_label Я получу
+										.SalesForm_itemWrapper
+											input(type="number" name="sum" id="purchase_result_amount" value="").SalesForm_text
+											.SalesForm_selectWrapper
+												select(name="purchase_result_currency" id="purchase_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+													option
+													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+								.SalesForm_actions
+									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
+									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
+						.Tabs_content
+							form(action="#").SalesForm
+								.SalesForm_items
+									.SalesForm_item
+										label(for="sale_amount").SalesForm_label Я хочу заплатить
+										.SalesForm_itemWrapper
+											input(type="number" name="sum" id="sale_amount" value="").SalesForm_text
+											.SalesForm_selectWrapper
+												select(name="sale_currency" id="sale_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+													option
+													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+									.SalesForm_item
+										label(for="sale_result_amount").SalesForm_label Я получу
+										.SalesForm_itemWrapper
+											input(type="number" name="sum" id="sale_result_amount" value="").SalesForm_text
+											.SalesForm_selectWrapper
+												select(name="sale_result_currency" id="sale_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+													option
+													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+								.SalesForm_actions
+									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
+									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
+	.ConsultSection
+		.Container
+			h2.ConsultSection_title Остались вопросы? #[br]Получите бесплатную консультацию
+			.ConsultSection_text
+				p Оставьте свой вопрос или завку #[br.hidden-smPlus]на консультацию #[br]и наш специалист свяжется с вами
+			.ConsultForm.ConsultSection_form
+				.ConsultForm_items
+					.ConsultForm_item
+						label(for="name").ConsultForm_label Ваше имя #[span.Red *]
+						input(type="text" name="name" id="name").ConsultForm_text
+					.ConsultForm_item
+						label(for="phone").ConsultForm_label Ваш номер телефона #[span.Red *]
+						input(type="tel" name="phone" id="phone").ConsultForm_text
+					.ConsultForm_item.ConsultForm_item-textArea
+						label(for="question").ConsultForm_label Напишите свой вопрос, если он есть
+						textarea(name="question" id="question").ConsultForm_textArea
+				.ConsultForm_actions
+					button(type="submit").BtnBlue Оставить заявку
