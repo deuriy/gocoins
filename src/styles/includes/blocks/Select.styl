@@ -11,39 +11,130 @@
 		gap 5px
 		height 22px
 		color var(--black)
+		
+		@media $smPlus
+			gap 23px
+			height 32px
+	
+	&_placeholderText
+		font-size 13px
+		font-family var(--open-sans)
+		
+		@media $xs
+			display none
 	
 	&_icon
+		flex-shrink 0
 		width 24px
+		
+		@media $smPlus
+			width 40px
 	
 	&_text
 		font-size 10px
+		color #333
+		
+		@media $smPlus
+			font-size 17px
 	
 	&-languages
 		width 53px
+		
+		@media $smPlus
+			width 210px
 	
 	&-currencies
 		width 77px
+		
+		@media $smPlus
+			width 166px
+	
+	&-selection
+		.Select_text
+			display none
+		
+		&.Select-currenciesSelection
+			.Select_text
+				display block
+				
+				@media $smPlus
+					font-size 24px
+			
+			@media $smMinus
+				.Select_icon
+					display none
+			
+			@media $smPlus
+				.Select_placeholderText
+					display none
+	
+	&-dropdownLanguages
+		margin-top 5px
+		
+		@media $smPlus
+			left 122px !important
+			width 87px !important
+			
+		.Select_iconWrapper
+			@media $smPlus
+				gap 9px
+				// justify-content end
+	
+	&-dropdownCurrencies
+		margin-top 5px
+		
+		@media $smPlus
+			.Select_iconWrapper
+				gap 18px
+				
+			.Select_icon
+				width 33px
+				
+			.Select_text
+				font-size 22px
+				line-height 1.361818181818182
 
-.select2-container--custom
+.select2-container--languages,
+.select2-container--currencies
 	.select2-selection--single
 		display flex
 		align-items center
 		justify-content space-between
 		height 22px
 		
+		@media $smPlus
+			height 32px
+		
 		.select2-selection__rendered
 			padding-right 4px
 			padding-left 4px
+			
+			@media $smPlus
+				padding-right 13px
+				padding-left 19px
 		
 		.select2-selection__arrow
 			// position relative
 			display flex
 			margin-right 4px
 			
+			@media $smPlus
+				margin-right 11px
+				margin-bottom 2px
+			
 			b
 				width 10px
 				height 6px
 				background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath fill='%23858383' d='M5 6 .67 0h8.66L5 6Z'/%3E%3C/svg%3E") center no-repeat
+				
+				@media $smPlus
+					width 14px
+					height 11px
+		
+		&:hover
+			.select2-selection__arrow
+				b
+					background-image url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath fill='%235E5E5E' d='M5 6 .67 0h8.66L5 6Z'/%3E%3C/svg%3E")
 	
 	.select2-dropdown--below
 		border-top-right-radius 5px
@@ -51,3 +142,24 @@
 		
 	.select2-results__option
 		padding 4px
+		font-weight 300
+		color #333
+		
+		&:hover
+			font-weight 400
+
+.select2-container--currencies
+	.select2-selection--single
+		@media $smPlus
+			height 51px
+			font-size 22px
+	
+		.select2-selection__arrow
+			b
+				@media $smPlus
+					width 28px
+					height 22px
+	
+	.select2-results__option
+		@media $smPlus
+			padding 5px 12px

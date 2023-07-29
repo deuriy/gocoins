@@ -1,5 +1,5 @@
 footer.Footer
-	.Container
+	.Container.Footer_container
 		.SecondaryMenu.Footer_secondaryMenu
 			ul.SecondaryMenu_list
 				li.SecondaryMenu_item
@@ -10,20 +10,21 @@ footer.Footer
 					a(href="#").SecondaryMenu_link Недвижимость за криптовалюту
 				li.SecondaryMenu_item
 					a(href="#").SecondaryMenu_link О нас
-		.Contacts.Footer_contacts
-			a(href="tel:+38269777680").Phone + 382 69 777 680
-			.SocIcons.SocIcons-whiteBg
-				ul.SocIcons_list
-					li.SocIcons_item
-						a(href="#").Ico.Ico-whatsapp.SocIcons_link
-					li.SocIcons_item
-						a(href="#").Ico.Ico-viber.SocIcons_link
-					li.SocIcons_item
-						a(href="#").Ico.Ico-telegram.SocIcons_link
-		.Social
-			h3.Social_title Мы в соцсетях
-			ul.Social_list
-				li.Social_item
-					a(href="http://instagram.com").Ico.Ico-instagramWhite.Social_link
-				li.Social_item
-					a(href="http://telegram.org").Ico.Ico-telegramWhite.Social_link
+		.Footer_contactsWrapper
+			.Contacts.Footer_contacts
+				a(href="tel:+38269777680").Phone + 382 69 777 680
+				.SocIcons.SocIcons-whiteBg
+					ul.SocIcons_list
+						li.SocIcons_item
+							a(href="#").Ico.Ico-whatsapp.Ico-contacts.SocIcons_link
+						li.SocIcons_item
+							a(href="#").Ico.Ico-viber.Ico-contacts.SocIcons_link
+						li.SocIcons_item
+							a(href="#").Ico.Ico-telegram.Ico-contacts.SocIcons_link
+			.Social.Footer_social
+				h3.Social_title Мы в соцсетях
+				ul.Social_list
+					li.Social_item
+						a(href="http://instagram.com").Ico.Ico-instagramWhite.Social_link
+					li.Social_item
+						a(href="http://telegram.org").Ico.Ico-telegramWhite.Social_link

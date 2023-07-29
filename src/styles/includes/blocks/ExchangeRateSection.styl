@@ -3,8 +3,27 @@
 	background #06091E
 	text-align center
 	
+	@media $smPlus
+		padding 56px 8px 58px
+		text-align left
+	
+	&_container
+		@media $smPlus
+			display grid
+			grid-template-columns repeat(2, auto)
+			justify-content start
+			align-items center
+			gap 73px
+	
 	&_text
 		margin-bottom 26px
 		color var(--orange)
 		font-size 20px
 		line-height 1
+		
+		@media $smPlus
+			font-size 50px
+	
+	&_btn
+		@media $smPlus
+			margin-bottom 46px

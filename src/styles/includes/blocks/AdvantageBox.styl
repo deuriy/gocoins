@@ -1,8 +1,15 @@
 .AdvantageBox
+	display grid
+	grid-template-columns 100%
+	grid-template-rows auto auto 1fr
 	width 181px
 	padding 21px 18px 19px
 	border-radius 10px
 	background #E8E3E3
+	
+	@media $smPlus
+		width 222px
+		padding 42px 18px 27px
 	
 	&_iconWrapper
 		display flex
@@ -19,7 +26,15 @@
 		color #333
 		font-size 20px
 		text-align center
+		
+		@media $smPlus
+			margin-bottom 12px
+			line-height 1.236
 	
 	&_text
 		color #717375
-		// font-size 16px
+		font-size 17px
+		line-height 1.235882352941176
+		
+		&-small
+			font-size 16px

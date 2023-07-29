@@ -1,0 +1,28 @@
+.MainMenu
+	background var(--orange)
+	
+	&_list
+		list-style none
+		display flex
+		justify-content center
+		gap 32px
+		width 100%
+		margin-right auto
+		margin-left auto
+		padding-right 17px
+		padding-left 17px
+	
+	&_link
+		display block
+		padding-top 18px
+		padding-bottom 21px
+		font-weight 300
+		font-size 18px
+		line-height 1.236111111111111
+		color var(--dark)
+		text-decoration none
+		@extend .Transition
+		
+		&:hover
+			// font-weight 700
+			text-decoration underline

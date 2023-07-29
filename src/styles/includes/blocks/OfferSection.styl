@@ -2,7 +2,13 @@
 	padding 56px 0 39px
 	background url("../img/bg_offer_section.jpg") 93% 0 / cover no-repeat
 	color var(--white)
-	text-align center
+	
+	@media $smPlus
+		padding 79px 0 84px
+		background-position 77% 0
+	
+	@media $xs
+		text-align center
 	
 	&_title
 		margin-bottom 35px
@@ -10,6 +16,12 @@
 		font-size 22px
 		line-height 1.136
 		text-transform uppercase
+		
+		@media $smPlus
+			margin-bottom 50px
+			font-size 40px
+			line-height 1.25
+			text-align center
 	
 	&_text
 		margin-bottom 70px
@@ -18,5 +30,18 @@
 		line-height normal
 		text-align left
 		
+		@media $smPlus
+			width 420px
+			margin-left 84px
+			font-size 30px
+			line-height 1.236
+		
 		& > p + p
 			margin-top 20px
+			
+			@media $smPlus
+				margin-top 35px
+	
+	&_btn
+		@media $smPlus
+			margin-left 86px

@@ -1,11 +1,23 @@
 .Header
-	padding 20px 0 16px
-	
-	&_container
+	&_top
+		padding 20px 0 16px
+		
+		@media $smPlus
+			padding 26px 57px 16px 5px
+		
+	&_topContainer
 		display grid
 		grid-template-columns repeat(4, auto)
 		justify-content space-between
 		align-items start
+		
+		@media $smPlus
+			grid-template-columns repeat(3, auto)
+			align-items center
+	
+	&_socIcons
+		@media $smPlus
+			order 1
 	
 	&_select
 		margin-top 2px

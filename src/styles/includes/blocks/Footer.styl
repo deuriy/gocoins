@@ -2,6 +2,31 @@
 	padding 3px 0 40px
 	background #06091E
 	
+	@media $smPlus
+		padding 53px 5px 80px 32px
+	
+	&_container
+		@media $smPlus
+			display grid
+			grid-template-columns repeat(2, auto)
+			justify-content space-between
+			align-items start
+			gap 20px
+	
 	&_secondaryMenu,
 	&_contacts
 		margin-bottom 12px
+	
+	// &_contacts
+	// 	@media $smPlus
+	// 		margin-bottom 0
+	
+	&_contactsWrapper
+		@media $smPlus
+			display grid
+			grid-template-columns 100%
+			justify-items end
+	
+	&_social
+		@media $smPlus
+			margin-right 12px

@@ -2,6 +2,9 @@
 	padding 5px 0 30px
 	background #06091E
 	
+	@media $smPlus
+		padding 16px 0 45px
+	
 	&_title,
 	&_text
 		text-align center
@@ -12,8 +15,22 @@
 		color var(--white)
 		font-weight 700
 		font-size 18px
+		
+		@media $smPlus
+			margin-bottom 22px
+			font-size 32px
+			line-height 1.2359375
 	
 	&_text
 		margin-bottom 24px
 		color #B6B6B6
 		font-size 15px
+		
+		@media $smPlus
+			margin-bottom 28px
+			font-size 30px
+			line-height 1.236
+	
+	&_form
+		margin-right auto
+		margin-left auto

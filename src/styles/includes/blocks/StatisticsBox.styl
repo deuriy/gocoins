@@ -1,28 +1,39 @@
 .StatisticsBox
 	width 181px
-	// padding 28px 16px
 	padding 18px 10px
 	border-radius 10px
 	background #171C29
 	color var(--orange)
 	text-align center
 	
+	@media $smPlus
+		width 222px
+		padding 39px 10px
+	
 	&_iconWrapper
 		display flex
 		justify-content center
 		align-items center
 		height 126px
-		// margin-bottom 26px
 		margin-bottom 20px
+		
+		@media $smPlus
+			height 105px
+			margin-bottom 32px
 	
 	&_icon
 		max-height 100%
 	
 	&_title
 		font-weight 400
-		// font-size 60px
 		font-size 50px
+		
+		@media $smPlus
+			font-size 60px
+			line-height 1.236
 	
 	&_text
-		// font-size 30px
 		font-size 25px
+		
+		@media $smPlus
+			font-size 30px

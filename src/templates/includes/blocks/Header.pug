@@ -1,21 +1,32 @@
 header.Header
-	.Container.Header_container
-		a(href="/").Logo
-			img(src="/img/icons/star.svg" alt="").Logo_img
-			.Logo_siteName GOCOINS
-			.Logo_siteDesc криптообменник в Черногории
-		.SocIcons
-			ul.SocIcons_list
-				li.SocIcons_item
-					a(href="#").Ico.Ico-whatsapp.SocIcons_link
-				li.SocIcons_item
-					a(href="#").Ico.Ico-viber.SocIcons_link
-				li.SocIcons_item
-					a(href="#").Ico.Ico-telegram.SocIcons_link
-		select.Select.Select-languages.Header_select
-			option(value="ru" data-icon="/img/icons/ru.jpg") RU
-			option(value="en" data-icon="/img/icons/en.jpg") EN
-		button(type="button").MenuHamburger.Header_menuHamburger
-			span.MenuHamburger_line
-			span.MenuHamburger_line
-			span.MenuHamburger_line
+	.Header_top
+		.Container.Header_topContainer
+			a(href="/").Logo
+				img(src="/img/icons/star.svg" alt="").Logo_img
+				.Logo_siteName GOCOINS
+				.Logo_siteDesc криптообменник в Черногории
+			.SocIcons.Header_socIcons
+				ul.SocIcons_list
+					li.SocIcons_item
+						a(href="#").Ico.Ico-whatsapp.SocIcons_link
+					li.SocIcons_item
+						a(href="#").Ico.Ico-viber.SocIcons_link
+					li.SocIcons_item
+						a(href="#").Ico.Ico-telegram.SocIcons_link
+			select.Select.Select-languages.Header_select(data-placeholder="Выберете язык")
+				option(value="ru" data-icon="/img/icons/ru.jpg") RU
+				option(value="en" data-icon="/img/icons/en.jpg") EN
+			button(type="button").MenuHamburger.Header_menuHamburger.hidden-smPlus
+				span.MenuHamburger_line
+				span.MenuHamburger_line
+				span.MenuHamburger_line
+	.MainMenu.hidden-xs
+		ul.MainMenu_list
+			li.MainMenu_item
+				a(href="#").MainMenu_link.MainMenu_link-active Как обменять?
+			li.MainMenu_item
+				a(href="#").MainMenu_link Переводы денег по Европе
+			li.MainMenu_item
+				a(href="#").MainMenu_link Недвижимость за криптовалюту
+			li.MainMenu_item
+				a(href="#").MainMenu_link О нас

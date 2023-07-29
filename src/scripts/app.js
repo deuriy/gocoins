@@ -25,10 +25,13 @@ function formatStateSelection(state) {
     return state.text;
   }
 
-  console.log(state.element);
+  let select = state.element.parentNode;
+  let placeholderText = select.getAttribute('data-placeholder');
+
+  console.log(select);
 
   let $state = $(
-    `<span class="Select_iconWrapper"><img src="${state.element.dataset.icon}" class="Select_icon" /></span>`
+    `<span class="Select_iconWrapper"><span class="Select_placeholderText">${placeholderText}</span><img src="${state.element.dataset.icon}" class="Select_icon" /><span class="Select_text">${state.text}</span></span>`
   );
 
   return $state;
@@ -37,10 +40,20 @@ function formatStateSelection(state) {
 $(() => {
   select2($);
 
-  $('.Select').select2({
-    dropdownCssClass: ':all:',
-    selectionCssClass: ':all:',
-    theme: 'custom',
+  $('.Select-languages').select2({
+    dropdownCssClass: 'Select Select-dropdownLanguages',
+    selectionCssClass: 'Select Select-selection',
+    theme: 'languages',
+    templateResult: formatStateResult,
+    templateSelection: formatStateSelection,
+    // dropdownAutoWidth: true,
+    minimumResultsForSearch: -1
+  });
+
+  $('.Select-currencies').select2({
+    dropdownCssClass: 'Select Select-dropdownCurrencies',
+    selectionCssClass: 'Select Select-selection Select-currenciesSelection',
+    theme: 'currencies',
     templateResult: formatStateResult,
     templateSelection: formatStateSelection,
     // dropdownAutoWidth: true,
@@ -51,16 +64,34 @@ $(() => {
     slidesPerView: 'auto',
     // centeredSlides: true,
     spaceBetween: 30,
+
+    breakpoints: {
+      768: {
+        spaceBetween: 39
+      }
+    }
   });
 
   const advantagesSwiper = new Swiper('.AdvantagesSwiper', {
     slidesPerView: 'auto',
     spaceBetween: 30,
+
+    breakpoints: {
+      768: {
+        spaceBetween: 36
+      }
+    }
   });
 
   const statisticsSwiper = new Swiper('.StatisticsSwiper', {
     slidesPerView: 'auto',
     spaceBetween: 30,
+
+    breakpoints: {
+      768: {
+        spaceBetween: 34
+      }
+    }
   });
 
   $('.MenuHamburger').click(function(event) {

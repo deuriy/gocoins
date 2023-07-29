@@ -3,6 +3,11 @@
 	padding 24px 0
 	background var(--black) url('../img/bitcoin.jpg') calc(50% + 20px) 57px / 582px no-repeat
 	
+	@media $smPlus
+		padding 34px 29px 45px
+		background-position center 2px
+		background-size cover
+	
 	&_title
 		width 255px
 		margin-bottom 12px
@@ -11,6 +16,12 @@
 		font-size 25px
 		line-height 1.2
 		text-transform uppercase
+		
+		@media $smPlus
+			width 355px
+			margin-bottom 16px
+			font-size 35px
+			line-height 1.142857142857143
 	
 	&_desc,
 	&_note
@@ -23,11 +34,25 @@
 		margin-bottom 20px
 		margin-left 2px
 		color var(--white)
+		
+		@media $smPlus
+			width 282px
+			margin-bottom 19px
+			margin-left 0
+			font-size 20px
 	
 	&_note
 		width 158px
 		margin-bottom 18px
 		color #717375
+		
+		@media $smPlus
+			width 253px
+			margin-bottom 24px
+			margin-left 4px
+			font-size 20px
+			line-height 1.236
 	
 	&_btnWrapper
-		text-align center
+		@media $xs
+			text-align center

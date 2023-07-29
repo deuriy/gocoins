@@ -7,9 +7,19 @@
 	&_item
 		height 26px
 		
+		@media $smPlus
+			height 50px
+		
 		& + .SocIcons_item
 			margin-left -4px
+			
+			@media $smPlus
+				margin-left -9px
 	
 	&-whiteBg
 		.SocIcons_list
 			background var(--white)
+		
+		.SocIcons_item
+			@media $smPlus
+				height 44px
