@@ -1,14 +1,26 @@
 .OfferSection
-	padding 56px 0 39px
-	background url("../img/bg_offer_section.jpg") 93% 0 / cover no-repeat
+	background #06091E
 	color var(--white)
-	
-	@media $smPlus
-		padding 79px 0 84px
-		background-position 77% 0
 	
 	@media $xs
 		text-align center
+	
+	&_inner
+		padding 56px 17px 39px
+		background url("../img/bg_offer_section.jpg") 93% 0 / cover no-repeat
+		
+		@media $smPlus
+			padding 79px 17px 84px
+			background-position 77% 0
+		
+		@media $smMinus
+			margin-right -17px
+			margin-left -17px
+	
+		@media $mdPlus
+			margin-right 14px
+			padding 52px 0 66px
+			border-radius 20px
 	
 	&_title
 		margin-bottom 35px
@@ -22,6 +34,9 @@
 			font-size 40px
 			line-height 1.25
 			text-align center
+		
+		@media $mdPlus
+			margin-bottom 52px
 	
 	&_text
 		margin-bottom 70px
@@ -36,12 +51,23 @@
 			font-size 30px
 			line-height 1.236
 		
+		@media $mdPlus
+			width 520px
+			margin-bottom 52px
+			margin-left 71px
+		
 		& > p + p
 			margin-top 20px
 			
 			@media $smPlus
 				margin-top 35px
+			
+			@media $mdPlus
+				margin-top 38px
 	
 	&_btn
 		@media $smPlus
 			margin-left 86px
+		
+		@media $mdPlus
+			margin-left 75px

@@ -10,16 +10,24 @@
 		width 222px
 		padding 39px 10px
 	
+	@media $mdPlus
+		width 354px
+		padding 39px 20px 33px
+	
 	&_iconWrapper
-		display flex
-		justify-content center
-		align-items center
+		display grid
+		grid-template-columns 100%
+		place-items center
 		height 126px
 		margin-bottom 20px
 		
 		@media $smPlus
 			height 105px
 			margin-bottom 32px
+		
+		@media $mdPlus
+			height 150px
+			margin-bottom 16px
 	
 	&_icon
 		max-height 100%
@@ -31,9 +39,17 @@
 		@media $smPlus
 			font-size 60px
 			line-height 1.236
+		
+		@media $mdPlus
+			margin-bottom -14px
+			font-size 100px
+			line-height 1
 	
 	&_text
 		font-size 25px
 		
 		@media $smPlus
 			font-size 30px
+		
+		@media $mdPlus
+			font-size 45px

@@ -2,6 +2,15 @@
 	padding 12px 0
 	background var(--black)
 	
+	@media $mdPlus
+		padding 20px 0
+	
 	&_swiper
 		margin-right -17px
 		margin-left -17px
+	
+	&_items
+		display grid
+		grid-template-columns repeat(4, 1fr)
+		gap 27px
+		margin-left -12px

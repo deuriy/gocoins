@@ -6,14 +6,14 @@ block content
 			.Container
 				h1.HeroSection_title Криптообменник в Черногории
 				.HeroSection_desc
-					p Лучшее место, где можно купить и продать криптовалюту #[br]с наличными деньгами. #[br]А &nbsp;также обменять рубли, #[br.hidden-smPlus]гривны.
+					p Лучшее место, где можно купить #[br.hidden-smMinus]и продать криптовалюту #[br]с наличными деньгами. #[br.hidden-mdPlus]А &nbsp;также обменять рубли, #[br.hidden-smPlus]гривны.
 				.HeroSection_note
-					p Безопасная покупка/#[br.hidden-smPlus]продажа #[br]на выгодных условиях. #[br.hidden-xs]SWIFT, MasterCard переводы с карты на карту от 30 000 €.
+					p Безопасная покупка/#[br.hidden-smPlus]продажа #[br]на выгодных условиях. #[br.hidden-xs]SWIFT, MasterCard переводы #[br.hidden-smMinus]с карты на карту от 30 000 €.
 				.HeroSection_btnWrapper
 					a(href="#").BtnOrange.BtnOrange-heroSection Оставить заявку
 		.CurrencyBlocks.HomePage_currencyBlocks
 			.Container
-				.CurrencySwiper.swiper-container.CurrencyBlocks_swiper
+				.CurrencySwiper.swiper-container.CurrencyBlocks_swiper.hidden-mdPlus
 					.swiper-wrapper
 						.swiper-slide.CurrencySwiper_slide
 							.CurrencyBlock
@@ -22,8 +22,9 @@ block content
 										img(src="/img/currencies/bitcoin.png" alt="Bitcoin").CurrencyBlock_logoImg
 									.CurrencyBlock_name Bitcoin
 									.CurrencyBlock_abbr BTC
-								.CurrencyBlock_price $ 27,746.8
-								.CurrencyBlock_difference -1.29%
+								.CurrencyBlock_prices
+									.CurrencyBlock_price $ 27,746.8
+									.CurrencyBlock_difference -1.29%
 						.swiper-slide.CurrencySwiper_slide
 							.CurrencyBlock
 								.CurrencyBlock_info
@@ -31,8 +32,9 @@ block content
 										img(src="/img/currencies/ethereum.png" alt="Ethereum").CurrencyBlock_logoImg
 									.CurrencyBlock_name Ethereum
 									.CurrencyBlock_abbr ETH
-								.CurrencyBlock_price $ 1,851.98
-								.CurrencyBlock_difference -0.35%
+								.CurrencyBlock_prices
+									.CurrencyBlock_price $ 1,851.98
+									.CurrencyBlock_difference -0.35%
 						.swiper-slide.CurrencySwiper_slide
 							.CurrencyBlock
 								.CurrencyBlock_info
@@ -40,8 +42,9 @@ block content
 										img(src="/img/currencies/tether.png" alt="Tether").CurrencyBlock_logoImg
 									.CurrencyBlock_name Tether
 									.CurrencyBlock_abbr USDT
-								.CurrencyBlock_price $ 27,746.8
-								.CurrencyBlock_difference -1.29%
+								.CurrencyBlock_prices
+									.CurrencyBlock_price $ 27,746.8
+									.CurrencyBlock_difference -1.29%
 						.swiper-slide.CurrencySwiper_slide
 							.CurrencyBlock
 								.CurrencyBlock_info
@@ -49,8 +52,46 @@ block content
 										img(src="/img/currencies/euro.png" alt="Euro").CurrencyBlock_logoImg
 									.CurrencyBlock_name Euro
 									.CurrencyBlock_abbr EUR
-								.CurrencyBlock_price $ 27,746.8
-								.CurrencyBlock_difference -1.29%
+								.CurrencyBlock_prices
+									.CurrencyBlock_price $ 27,746.8
+									.CurrencyBlock_difference -1.29%
+				.CurrencyBlocks_items.hidden-smMinus
+					.CurrencyBlock.CurrencyBlocks_item
+						.CurrencyBlock_info
+							.CurrencyBlock_logo
+								img(src="/img/currencies/bitcoin.png" alt="Bitcoin").CurrencyBlock_logoImg
+							.CurrencyBlock_name Bitcoin
+							.CurrencyBlock_abbr BTC
+						.CurrencyBlock_prices
+							.CurrencyBlock_price $ 27,746.8
+							.CurrencyBlock_difference -1.29%
+					.CurrencyBlock.CurrencyBlocks_item
+						.CurrencyBlock_info
+							.CurrencyBlock_logo
+								img(src="/img/currencies/ethereum.png" alt="Ethereum").CurrencyBlock_logoImg
+							.CurrencyBlock_name Ethereum
+							.CurrencyBlock_abbr ETH
+						.CurrencyBlock_prices
+							.CurrencyBlock_price $ 1,851.98
+							.CurrencyBlock_difference -0.35%
+					.CurrencyBlock.CurrencyBlocks_item
+						.CurrencyBlock_info
+							.CurrencyBlock_logo
+								img(src="/img/currencies/tether.png" alt="Tether").CurrencyBlock_logoImg
+							.CurrencyBlock_name Tether
+							.CurrencyBlock_abbr USDT
+						.CurrencyBlock_prices
+							.CurrencyBlock_price $ 27,746.8
+							.CurrencyBlock_difference -1.29%
+					.CurrencyBlock.CurrencyBlocks_item
+						.CurrencyBlock_info
+							.CurrencyBlock_logo
+								img(src="/img/currencies/euro.png" alt="Euro").CurrencyBlock_logoImg
+							.CurrencyBlock_name Euro
+							.CurrencyBlock_abbr EUR
+						.CurrencyBlock_prices
+							.CurrencyBlock_price $ 27,746.8
+							.CurrencyBlock_difference -1.29%
 		.ExchangeRateSection
 			.Container.ExchangeRateSection_container
 				.ExchangeRateSection_text
@@ -58,88 +99,114 @@ block content
 				a(href="#").BtnBlue.BtnBlue-subscribe.ExchangeRateSection_btn Подписаться
 		.SalesSection
 			.Container
-				.Tabs
-					ul.Tabs_list
-						li.Tabs_item.Tabs_item-active Купить
-						li.Tabs_item Продать
-					.Tabs_container
-						.Tabs_content(style="display: block;")
-							form(action="#").SalesForm
-								.SalesForm_items
-									.SalesForm_item
-										label(for="purchase_amount").SalesForm_label Я хочу заплатить
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="purchase_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="purchase_currency" id="purchase_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-									.SalesForm_item
-										label(for="purchase_result_amount").SalesForm_label Я получу
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="purchase_result_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="purchase_result_currency" id="purchase_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-								.SalesForm_actions
-									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
-									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
-						.Tabs_content
-							form(action="#").SalesForm
-								.SalesForm_items
-									.SalesForm_item
-										label(for="sale_amount").SalesForm_label Я хочу заплатить
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="sale_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="sale_currency" id="sale_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-									.SalesForm_item
-										label(for="sale_result_amount").SalesForm_label Я получу
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="sale_result_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="sale_result_currency" id="sale_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-								.SalesForm_actions
-									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
-									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
+				.SalesSection_inner
+					.Tabs
+						ul.Tabs_list
+							li.Tabs_item.Tabs_item-active Купить
+							li.Tabs_item Продать
+						.Tabs_container
+							.Tabs_content(style="display: block;")
+								form(action="#").SalesForm
+									.SalesForm_items
+										.SalesForm_item
+											label(for="purchase_amount").SalesForm_label Я хочу заплатить
+											.SalesForm_itemWrapper
+												input(type="number" name="sum" id="purchase_amount" value="").SalesForm_text
+												.SalesForm_selectWrapper
+													select(name="purchase_currency" id="purchase_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+														option
+														option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+														option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+														option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+										.SalesForm_item
+											label(for="purchase_result_amount").SalesForm_label Я получу
+											.SalesForm_itemWrapper
+												input(type="number" name="sum" id="purchase_result_amount" value="").SalesForm_text
+												.SalesForm_selectWrapper
+													select(name="purchase_result_currency" id="purchase_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+														option
+														option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+														option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+														option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+									.SalesForm_actions
+										button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
+										button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
+							.Tabs_content
+								form(action="#").SalesForm
+									.SalesForm_items
+										.SalesForm_item
+											label(for="sale_amount").SalesForm_label Я хочу заплатить
+											.SalesForm_itemWrapper
+												input(type="number" name="sum" id="sale_amount" value="").SalesForm_text
+												.SalesForm_selectWrapper
+													select(name="sale_currency" id="sale_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+														option
+														option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+														option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+														option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+										.SalesForm_item
+											label(for="sale_result_amount").SalesForm_label Я получу
+											.SalesForm_itemWrapper
+												input(type="number" name="sum" id="sale_result_amount" value="").SalesForm_text
+												.SalesForm_selectWrapper
+													select(name="sale_result_currency" id="sale_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
+														option
+														option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
+														option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
+														option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
+									.SalesForm_actions
+										button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
+										button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
 		.AdvantagesSection
 			.Container
-				.AdvantagesSwiper.swiper-container.AdvantagesSection_swiper
+				.AdvantagesSwiper.swiper-container.AdvantagesSection_swiper.hidden-mdPlus
 					.swiper-wrapper.AdvantagesSwiper_slides
 						.swiper-slide.AdvantagesSwiper_slide
 							.AdvantageBox.AdvantagesSwiper_item
 								.AdvantageBox_iconWrapper
 									img(src="/img/advantages/security.png" alt="").AdvantageBox_icon
-								h3.AdvantageBox_title Безопасно #[br.hidden-xs]и надежно
-								.AdvantageBox_text
-									p Наличие машинки для проверки купюр в офисе Будвы. Безопасные крипто переводы.
+								.AdvantageBox_textWrapper
+									h3.AdvantageBox_title Безопасно #[br.hidden-xs]и надежно
+									.AdvantageBox_text
+										p Наличие машинки для проверки купюр в офисе Будвы. Безопасные крипто переводы.
 						.swiper-slide.AdvantagesSwiper_slide
 							.AdvantageBox.AdvantagesSwiper_item
 								.AdvantageBox_iconWrapper
 									img(src="/img/advantages/benefit.png" alt="").AdvantageBox_icon
-								h3.AdvantageBox_title Выгодно #[br.hidden-xs]и быстро
-								.AdvantageBox_text.AdvantageBox_text-small
-									p Минимально возможная комиссия за услуги. Перевод/#[br]обналичивание в день заявки.
+								.AdvantageBox_textWrapper
+									h3.AdvantageBox_title Выгодно #[br.hidden-xs]и быстро
+									.AdvantageBox_text.AdvantageBox_text-small
+										p Минимально возможная комиссия за услуги. Перевод/#[br]обналичивание в день заявки.
 						.swiper-slide.AdvantagesSwiper_slide
 							.AdvantageBox.AdvantagesSwiper_item
 								.AdvantageBox_iconWrapper
 									img(src="/img/advantages/money_transfers.png" alt="").AdvantageBox_icon
-								h3.AdvantageBox_title Переводы #[br.hidden-xs]по Европе
-								.AdvantageBox_text.AdvantageBox_text-small
-									p Переводы  из Черногории в страны: РФ, ОАЭ, Украина, Италия, Чехия, Германия. Комиссия 3-6 %.
+								.AdvantageBox_textWrapper
+									h3.AdvantageBox_title Переводы #[br.hidden-xs]по Европе
+									.AdvantageBox_text.AdvantageBox_text-small
+										p Переводы  из Черногории в страны: РФ, ОАЭ, Украина, Италия, Чехия, Германия. Комиссия 3-6 %.
+				.AdvantagesSection_items.hidden-smMinus
+					.AdvantageBox.AdvantagesSection_item
+						.AdvantageBox_iconWrapper
+							img(src="/img/advantages/security.png" alt="").AdvantageBox_icon
+						.AdvantageBox_textWrapper
+							h3.AdvantageBox_title Безопасно #[br.hidden-xs.hidden-mdPlus]и надежно
+							.AdvantageBox_text
+								p Наличие машинки для проверки купюр в офисе Будвы. Безопасные крипто переводы.
+					.AdvantageBox.AdvantageBox-benefit.AdvantagesSection_item
+						.AdvantageBox_iconWrapper
+							img(src="/img/advantages/benefit.png" alt="").AdvantageBox_icon
+						.AdvantageBox_textWrapper
+							h3.AdvantageBox_title Выгодно #[br.hidden-xs.hidden-mdPlus]и быстро
+							.AdvantageBox_text.AdvantageBox_text-small
+								p Минимально возможная комиссия за услуги. Перевод/#[br.hidden-mdPlus]обналичивание #[br.hidden-smMinus]в день заявки.
+					.AdvantageBox.AdvantagesSection_item
+						.AdvantageBox_iconWrapper
+							img(src="/img/advantages/money_transfers.png" alt="").AdvantageBox_icon
+						.AdvantageBox_textWrapper
+							h3.AdvantageBox_title Переводы #[br.hidden-xs.hidden-mdPlus]по Европе
+							.AdvantageBox_text.AdvantageBox_text-small
+								p Переводы  из Черногории в страны: РФ, ОАЭ, Украина, Италия, Чехия, Германия. Комиссия 3-6 %.
 		.ConsultSection
 			.Container
 				h2.ConsultSection_title Остались вопросы? #[br]Получите бесплатную консультацию
@@ -160,7 +227,7 @@ block content
 						button(type="submit").BtnBlue Оставить заявку
 		.StatisticsSection
 			.Container
-				.StatisticsSwiper.swiper-container.StatisticsSection_swiper
+				.StatisticsSwiper.swiper-container.StatisticsSection_swiper.hidden-mdPlus
 					.swiper-wrapper
 						.swiper-slide.StatisticsSwiper_slide
 							.StatisticsBox
@@ -183,13 +250,33 @@ block content
 								h3.StatisticsBox_title 2.570
 								.StatisticsBox_text
 									p Консультаций
+				.StatisticsSection_items.hidden-smMinus
+					.StatisticsBox.StatisticsSection_item
+						.StatisticsBox_iconWrapper
+							img(src="/img/statistics/buyers.png" alt="").StatisticsBox_icon
+						h3.StatisticsBox_title 11.200
+						.StatisticsBox_text
+							p Покупателей
+					.StatisticsBox.StatisticsSection_item
+						.StatisticsBox_iconWrapper
+							img(src="/img/statistics/transactions.png" alt="").StatisticsBox_icon
+						h3.StatisticsBox_title 15.360
+						.StatisticsBox_text
+							p Транзакций
+					.StatisticsBox.StatisticsSection_item
+						.StatisticsBox_iconWrapper
+							img(src="/img/statistics/consultations.png" alt="").StatisticsBox_icon
+						h3.StatisticsBox_title 2.570
+						.StatisticsBox_text
+							p Консультаций
 		.OfferSection
 			.Container
-				h2.OfferSection_title Купить недвижимость #[br]в Черногории за #[br]криптовалюту
-				.OfferSection_text
-					p GOCOINS лидер в сфере имущества, #[br]чтобы помочь своим клиентам легко инвестировать в недвижимость.
-					p Более 10 000 предложений на побережье Черногории которые можно купить за Bitcoin или другую цифровую валюту.
-				a(href="#").BtnOrange.BtnOrange-offerSection.OfferSection_btn Узнать подробнее
+				.OfferSection_inner
+					h2.OfferSection_title Купить недвижимость #[br]в Черногории за #[br.hidden-mdPlus]криптовалюту
+					.OfferSection_text
+						p GOCOINS лидер в сфере имущества, #[br]чтобы помочь своим клиентам легко инвестировать в недвижимость.
+						p Более 10 000 предложений на побережье Черногории которые можно купить за Bitcoin или другую цифровую валюту.
+					a(href="#").BtnOrange.BtnOrange-offerSection.OfferSection_btn Узнать подробнее
 		.AboutSection
 			.Container
 				.AboutSection_text

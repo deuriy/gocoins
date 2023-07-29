@@ -1,7 +1,7 @@
 .AdvantageBox
 	display grid
 	grid-template-columns 100%
-	grid-template-rows auto auto 1fr
+	grid-template-rows auto 1fr
 	width 181px
 	padding 21px 18px 19px
 	border-radius 10px
@@ -11,25 +11,42 @@
 		width 222px
 		padding 42px 18px 27px
 	
+	@media $mdPlus
+		grid-template-columns 90px 1fr
+		grid-template-rows auto
+		gap 0 17px
+		width 354px
+		padding 22px 13px 4px 11px
+	
 	&_iconWrapper
-		display flex
-		justify-content center
-		align-items center
+		display grid
+		grid-template-columns 100%
+		place-items center
 		height 83px
 		margin-bottom 12px
+		
+		@media $mdPlus
+			place-items start center
+			height auto
+			margin-bottom 0
 	
 	&_icon
 		max-height 100%
+		
+		@media $mdPlus
+			max-height 83px
 	
 	&_title
 		margin-bottom 21px
 		color #333
 		font-size 20px
-		text-align center
 		
 		@media $smPlus
 			margin-bottom 12px
 			line-height 1.236
+		
+		@media $smMinus
+			text-align center
 	
 	&_text
 		color #717375
@@ -38,3 +55,14 @@
 		
 		&-small
 			font-size 16px
+	
+	&-benefit
+		@media $mdPlus
+			min-height 163px
+			grid-template-columns 120px 1fr
+			
+			.AdvantageBox_iconWrapper
+				padding-top 20px
+			
+			.AdvantageBox_title
+				margin-bottom 4px

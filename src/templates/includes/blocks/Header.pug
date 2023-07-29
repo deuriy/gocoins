@@ -1,7 +1,7 @@
 header.Header
 	.Header_top
 		.Container.Header_topContainer
-			a(href="/").Logo
+			a(href="/" title="На главную").Logo.Header_logo
 				img(src="/img/icons/star.svg" alt="").Logo_img
 				.Logo_siteName GOCOINS
 				.Logo_siteDesc криптообменник в Черногории
@@ -13,13 +13,15 @@ header.Header
 						a(href="#").Ico.Ico-viber.SocIcons_link
 					li.SocIcons_item
 						a(href="#").Ico.Ico-telegram.SocIcons_link
-			select.Select.Select-languages.Header_select(data-placeholder="Выберете язык")
-				option(value="ru" data-icon="/img/icons/ru.jpg") RU
-				option(value="en" data-icon="/img/icons/en.jpg") EN
+			.Header_selectWrapper
+				select.Select.Select-languages.Header_select(data-placeholder="Выберите язык")
+					option(value="ru" data-icon="/img/icons/ru.jpg") RU
+					option(value="en" data-icon="/img/icons/en.jpg") EN
 			button(type="button").MenuHamburger.Header_menuHamburger.hidden-smPlus
 				span.MenuHamburger_line
 				span.MenuHamburger_line
 				span.MenuHamburger_line
+			a(href="tel:+38269777680").Phone.Phone-dark.hidden-smMinus.Header_phone + 382 69 777 680
 	.MainMenu.hidden-xs
 		ul.MainMenu_list
 			li.MainMenu_item

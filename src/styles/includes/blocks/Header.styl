@@ -5,22 +5,47 @@
 		@media $smPlus
 			padding 26px 57px 16px 5px
 		
+		@media $mdPlus
+			padding 36px 0 16px
+		
 	&_topContainer
 		display grid
 		grid-template-columns repeat(4, auto)
-		justify-content space-between
 		align-items start
+		
+		@media $smMinus
+			justify-content space-between
 		
 		@media $smPlus
 			grid-template-columns repeat(3, auto)
 			align-items center
+		
+		@media $mdPlus
+			grid-template-columns 1fr auto auto auto
+			justify-content end
+	
+	&_logo
+		@media $mdPlus
+			margin-left 12px
 	
 	&_socIcons
 		@media $smPlus
 			order 1
+		
+		@media $mdPlus
+			margin-right 17px
 	
-	&_select
+	&_selectWrapper
 		margin-top 2px
+		
+		@media $mdPlus
+			margin-top -5px
+			margin-right 100px
 	
 	&_menuHamburger
 		margin-top 2px
+	
+	&_phone
+		@media $mdPlus
+			order 2
+			margin-right 15px

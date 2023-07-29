@@ -1,5 +1,4 @@
 .HeroSection
-	// padding 24px 0 36px
 	padding 24px 0
 	background var(--black) url('../img/bitcoin.jpg') calc(50% + 20px) 57px / 582px no-repeat
 	
@@ -7,6 +6,11 @@
 		padding 34px 29px 45px
 		background-position center 2px
 		background-size cover
+	
+	@media $mdPlus
+		padding 50px 0 66px
+		background-position 49.3% 0
+		background-size auto 120%
 	
 	&_title
 		width 255px
@@ -22,6 +26,11 @@
 			margin-bottom 16px
 			font-size 35px
 			line-height 1.142857142857143
+		
+		@media $mdPlus
+			margin-bottom 15px
+			font-size 40px
+			line-height 1
 	
 	&_desc,
 	&_note
@@ -40,6 +49,11 @@
 			margin-bottom 19px
 			margin-left 0
 			font-size 20px
+		
+		@media $mdPlus
+			width 370px
+			margin-bottom 24px
+			font-size 26px
 	
 	&_note
 		width 158px
@@ -52,6 +66,13 @@
 			margin-left 4px
 			font-size 20px
 			line-height 1.236
+		
+		@media $mdPlus
+			width 370px
+			margin-bottom 36px
+			margin-left 0
+			font-size 26px
+			line-height normal
 	
 	&_btnWrapper
 		@media $xs

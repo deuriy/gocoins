@@ -7,13 +7,20 @@
 		padding 56px 8px 58px
 		text-align left
 	
+	@media $mdPlus
+		padding 76px 8px
+	
 	&_container
 		@media $smPlus
 			display grid
 			grid-template-columns repeat(2, auto)
-			justify-content start
+			// justify-content start
+			justify-content center
 			align-items center
 			gap 73px
+		
+		@media $smPlus
+			gap 62px
 	
 	&_text
 		margin-bottom 26px
@@ -27,3 +34,6 @@
 	&_btn
 		@media $smPlus
 			margin-bottom 46px
+			
+		@media $mdPlus
+			margin-bottom 8px

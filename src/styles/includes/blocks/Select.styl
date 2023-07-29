@@ -15,6 +15,10 @@
 		@media $smPlus
 			gap 23px
 			height 32px
+		
+		@media $mdPlus
+			gap 35px
+			height 40px
 	
 	&_placeholderText
 		font-size 13px
@@ -22,6 +26,9 @@
 		
 		@media $xs
 			display none
+		
+		@media $mdPlus
+			font-size 17px
 	
 	&_icon
 		flex-shrink 0
@@ -42,30 +49,43 @@
 		
 		@media $smPlus
 			width 210px
+		
+		@media $mdPlus
+			width 270px
 	
 	&-currencies
 		width 77px
 		
 		@media $smPlus
 			width 166px
+		
+		@media $mdPlus
+			width 176px
 	
 	&-selection
 		.Select_text
 			display none
 		
 		&.Select-currenciesSelection
+			.Select_iconWrapper
+				@media $mdPlus
+					gap 9px
+					
 			.Select_text
 				display block
 				
 				@media $smPlus
 					font-size 24px
+					
+				@media $mdPlus
+					order -1
 			
-			@media $smMinus
-				.Select_icon
+			.Select_icon
+				@media $smMinus
 					display none
 			
-			@media $smPlus
-				.Select_placeholderText
+			.Select_placeholderText
+				@media $smPlus
 					display none
 	
 	&-dropdownLanguages
@@ -74,6 +94,9 @@
 		@media $smPlus
 			left 122px !important
 			width 87px !important
+		
+		@media $mdPlus
+			left 182px !important
 			
 		.Select_iconWrapper
 			@media $smPlus
@@ -105,6 +128,9 @@
 		@media $smPlus
 			height 32px
 		
+		@media $mdPlus
+			height 40px
+		
 		.select2-selection__rendered
 			padding-right 4px
 			padding-left 4px
@@ -112,6 +138,9 @@
 			@media $smPlus
 				padding-right 13px
 				padding-left 19px
+			
+			@media $mdPlus
+				padding-left 26px
 		
 		.select2-selection__arrow
 			// position relative
@@ -159,6 +188,10 @@
 				@media $smPlus
 					width 28px
 					height 22px
+		
+		.select2-selection__rendered
+			@media $mdPlus
+				padding-left 15px
 	
 	.select2-results__option
 		@media $smPlus

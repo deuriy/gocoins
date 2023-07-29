@@ -5,6 +5,9 @@
 	@media $smPlus
 		padding 53px 5px 80px 32px
 	
+	@media $mdPlus
+		padding 43px 0 81px
+	
 	&_container
 		@media $smPlus
 			display grid
@@ -17,16 +20,18 @@
 	&_contacts
 		margin-bottom 12px
 	
-	// &_contacts
-	// 	@media $smPlus
-	// 		margin-bottom 0
-	
 	&_contactsWrapper
 		@media $smPlus
 			display grid
 			grid-template-columns 100%
 			justify-items end
+		
+		@media $mdPlus
+			margin-right 15px
 	
 	&_social
 		@media $smPlus
 			margin-right 12px
+		
+		@media $mdPlus
+			margin-right 27px

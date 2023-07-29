@@ -11,6 +11,9 @@
 		margin-left auto
 		padding-right 17px
 		padding-left 17px
+		
+		@media $mdPlus
+			gap 45px
 	
 	&_link
 		display block
@@ -23,6 +26,11 @@
 		text-decoration none
 		@extend .Transition
 		
+		@media $mdPlus
+			padding-top 23px
+			padding-bottom 24px
+			font-size 24px
+		
 		&:hover
-			// font-weight 700
-			text-decoration underline
+			font-weight 700
+			// text-decoration underline
