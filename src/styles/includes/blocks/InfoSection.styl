@@ -1,6 +1,13 @@
 .InfoSection
-	padding 20px 0
+	// padding 20px 0
+	padding 20px 0 44px
 	background #06091E
+	
+	@media $smPlus
+		padding-bottom 60px
+		
+	@media $mdPlus
+		padding-bottom 110px
 	
 	&_swiper
 		margin-right -17px
@@ -10,3 +17,13 @@
 		display grid
 		grid-template-columns repeat(3, 1fr)
 		gap 30px
+	
+	&_btnWrapper
+		margin-top 33px
+		text-align center
+		
+		@media $smPlus
+			margin-top 64px
+		
+		@media $mdPlus
+			margin-top 52px

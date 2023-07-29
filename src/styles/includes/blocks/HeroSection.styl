@@ -49,6 +49,15 @@
 		margin-left 2px
 		color var(--white)
 		
+		& > p
+			margin-top 20px
+			
+			@media $smPlus
+				margin-top 30px
+				
+			@media $mdPlus
+				margin-top 40px
+		
 		@media $smPlus
 			width 282px
 			margin-bottom 19px
@@ -95,6 +104,8 @@
 				margin-bottom 11px
 	
 	&-property
+		background-position calc(50% + 20px) 0
+		
 		.HeroSection_title
 			@media $smPlus
 				width 370px
@@ -113,9 +124,22 @@
 				width 440px
 				margin-bottom 72px
 		
-		.HeroSection_note
-			@media $xs
-				width 300px
-			
+		.HeroSection_note			
 			@media $mdPlus
 				width 400px
+	
+	&-about
+		background-position calc(50% + 20px) 0
+		
+		.HeroSection_desc
+			@media $xs
+				width 250px
+				margin-bottom 36px
+				
+			@media $smPlus
+				width 409px
+				margin-bottom 33px
+				
+			@media $mdPlus
+				width 515px
+				margin-bottom 70px

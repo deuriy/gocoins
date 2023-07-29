@@ -1,0 +1,94 @@
+extends layouts/base
+
+block content
+	.HeroSection.HeroSection-about(style="background-image: url('../img/about.jpg')")
+		.Container
+			h1.HeroSection_title О нас
+			.HeroSection_desc
+				p GOCOINS - криптообменник в Черногории, Будва. Безопасная покупка/продажа к от 1000 €  на выгодных условиях. SWIFT, MasterCard переводы с карту на карту от 30 000 €.
+				p Если вам нужно быстро и надежно обменять цифровую валюту или отправить деньги из Черногории в другую страну, просто оставьте заявку на нашем сайте или позвоните нам на любой месседжер Whatsapp, Wiber, Telegram
+				p Ведущий криптовалютный внебиржевой обменник для покупки недвижимости за биткоин в Черногории
+			.HeroSection_btnWrapper
+				a(href="#").BtnOrange.BtnOrange-heroSection Оставить заявку
+	.StatisticsSection
+		.Container
+			.StatisticsSwiper.swiper-container.StatisticsSection_swiper.hidden-mdPlus
+				.swiper-wrapper
+					.swiper-slide.StatisticsSwiper_slide
+						.StatisticsBox
+							.StatisticsBox_iconWrapper
+								img(src="/img/statistics/buyers.png" alt="").StatisticsBox_icon
+							h3.StatisticsBox_title 11.200
+							.StatisticsBox_text
+								p Покупателей
+					.swiper-slide.StatisticsSwiper_slide
+						.StatisticsBox
+							.StatisticsBox_iconWrapper
+								img(src="/img/statistics/transactions.png" alt="").StatisticsBox_icon
+							h3.StatisticsBox_title 15.360
+							.StatisticsBox_text
+								p Транзакций
+					.swiper-slide.StatisticsSwiper_slide
+						.StatisticsBox
+							.StatisticsBox_iconWrapper
+								img(src="/img/statistics/consultations.png" alt="").StatisticsBox_icon
+							h3.StatisticsBox_title 2.570
+							.StatisticsBox_text
+								p Консультаций
+			.StatisticsSection_items.hidden-smMinus
+				.StatisticsBox.StatisticsSection_item
+					.StatisticsBox_iconWrapper
+						img(src="/img/statistics/buyers.png" alt="").StatisticsBox_icon
+					h3.StatisticsBox_title 11.200
+					.StatisticsBox_text
+						p Покупателей
+				.StatisticsBox.StatisticsSection_item
+					.StatisticsBox_iconWrapper
+						img(src="/img/statistics/transactions.png" alt="").StatisticsBox_icon
+					h3.StatisticsBox_title 15.360
+					.StatisticsBox_text
+						p Транзакций
+				.StatisticsBox.StatisticsSection_item
+					.StatisticsBox_iconWrapper
+						img(src="/img/statistics/consultations.png" alt="").StatisticsBox_icon
+					h3.StatisticsBox_title 2.570
+					.StatisticsBox_text
+						p Консультаций
+	.ContactsSection
+		.Container
+			h2.ContactsSection_title Контакты
+			.ContactsSection_textWrapper
+				.ContactsSection_text
+					a(href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x134dd47cc2725903:0x6af4a3ebc3695d6e?source=g.page.share" target="_blank") Budva, Jadranski put bb.Office 1, 85310
+				.ContactsSection_phoneAndSocial
+					.ContactsSection_phone Тел.: +382 69 777 680
+					.SocIcons.SocIcons-whiteBg.ContactsSection_socIcons
+						ul.SocIcons_list
+							li.SocIcons_item
+								a(href="#").Ico.Ico-whatsapp.Ico-contacts.SocIcons_link
+							li.SocIcons_item
+								a(href="#").Ico.Ico-viber.Ico-contacts.SocIcons_link
+							li.SocIcons_item
+								a(href="#").Ico.Ico-telegram.Ico-contacts.SocIcons_link
+			.Map.ContactsSection_map
+				h2.Map_title На карте
+				.Map_imgWrapper
+					img(src="/img/map.png" alt="Map").Map_img
+	.ConsultSection
+		.Container
+			h2.ConsultSection_title.ConsultSection_title-blueDesktop Остались вопросы? #[br]Получите бесплатную консультацию
+			.ConsultSection_text
+				p Оставьте свой вопрос или завку #[br.hidden-smPlus]на консультацию #[br]и наш специалист свяжется с вами
+			.ConsultForm.ConsultSection_form
+				.ConsultForm_items
+					.ConsultForm_item
+						label(for="name").ConsultForm_label Ваше имя #[span.Red *]
+						input(type="text" name="name" id="name").ConsultForm_text
+					.ConsultForm_item
+						label(for="phone").ConsultForm_label Ваш номер телефона #[span.Red *]
+						input(type="tel" name="phone" id="phone").ConsultForm_text
+					.ConsultForm_item.ConsultForm_item-textArea
+						label(for="question").ConsultForm_label Напишите свой вопрос, если он есть
+						textarea(name="question" id="question").ConsultForm_textArea
+				.ConsultForm_actions
+					button(type="submit").BtnBlue Оставить заявку

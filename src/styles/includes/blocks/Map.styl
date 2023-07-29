@@ -1,0 +1,32 @@
+.Map	
+	&_title
+		margin-bottom 44px
+		font-size 25px
+		line-height 1.6
+		color var(--blue)
+		text-align center
+		
+		@media $smPlus
+			font-size 40px
+			line-height 1
+		
+		@media $mdPlus
+			margin-bottom 29px
+	
+	&_imgWrapper
+		display grid
+		place-content center
+		height 402px
+		overflow hidden
+		
+		@media $smPlus
+			width 592px
+			margin-right auto
+			margin-left auto
+		
+		@media $mdPlus
+			width 648px
+			height 440px
+	
+	&_img
+		max-width none

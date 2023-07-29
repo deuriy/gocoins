@@ -7,8 +7,6 @@ function formatStateResult(state) {
     return state.text;
   }
 
-  console.log(state.element);
-
   let $state = $(
     `<span class="Select_iconWrapper"><img src="${state.element.dataset.icon}" class="Select_icon" /><span class="Select_text">${state.text}</span></span>`
   );
@@ -24,8 +22,6 @@ function formatStateSelection(state) {
   let select = state.element.parentNode;
   let placeholderText = select.getAttribute('data-placeholder');
 
-  console.log(select);
-
   let $state = $(
     `<span class="Select_iconWrapper"><span class="Select_placeholderText">${placeholderText}</span><img src="${state.element.dataset.icon}" class="Select_icon" /><span class="Select_text">${state.text}</span></span>`
   );
@@ -36,13 +32,28 @@ function formatStateSelection(state) {
 $(() => {
   select2($);
 
+  $('.MainMenu_link').each(function(index, link) {
+    let linkHref = $(link).attr('href');
+
+    if (window.location.pathname == linkHref) {
+      $(link).addClass('MainMenu_link-active');
+    }
+  });
+  
+  $('.MobileMenu_link').each(function(index, link) {
+    let linkHref = $(link).attr('href');
+
+    if (window.location.pathname == linkHref) {
+      $(link).addClass('MobileMenu_link-active');
+    }
+  });
+
   $('.Select-languages').select2({
     dropdownCssClass: 'Select Select-dropdownLanguages',
     selectionCssClass: 'Select Select-selection',
     theme: 'languages',
     templateResult: formatStateResult,
     templateSelection: formatStateSelection,
-    // dropdownAutoWidth: true,
     minimumResultsForSearch: -1
   });
 
@@ -52,13 +63,11 @@ $(() => {
     theme: 'currencies',
     templateResult: formatStateResult,
     templateSelection: formatStateSelection,
-    // dropdownAutoWidth: true,
     minimumResultsForSearch: -1
   });
 
   const currencySwiper = new Swiper('.CurrencySwiper', {
     slidesPerView: 'auto',
-    // centeredSlides: true,
     spaceBetween: 30,
 
     breakpoints: {
@@ -70,7 +79,6 @@ $(() => {
 
   const infoSwiper = new Swiper('.InfoSwiper', {
     slidesPerView: 'auto',
-    // centeredSlides: true,
     spaceBetween: 30,
 
     breakpoints: {

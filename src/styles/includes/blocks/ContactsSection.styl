@@ -1,0 +1,78 @@
+.ContactsSection
+	padding 30px 0
+	background #06091E
+	
+	@media $smPlus
+		padding-bottom 80px
+	
+	@media $mdPlus
+		padding-bottom 100px
+	
+	&_title
+		margin-bottom 12px
+		color var(--blue)
+		font-size 25px
+		line-height 1.6
+		text-align center
+		
+		@media $smPlus
+			margin-bottom 27px
+			font-size 40px
+			line-height 1
+	
+	&_textWrapper
+		@media $smPlus
+			width 500px
+			margin-right auto
+			margin-left auto
+	
+	&_text
+		margin-bottom 20px
+		font-size 20px
+		
+		@media $smPlus
+			margin-bottom 30px
+			font-size 30px
+			line-height 1.236
+		
+		& > a
+			color #B6B6B6
+			
+			&:hover
+				text-decoration none
+	
+	&_phoneAndSocial
+		display grid
+		grid-template-columns 100%
+		justify-items start
+		gap 10px
+		
+		@media $smPlus
+			grid-template-columns 1fr auto
+			align-items center
+			gap 15px
+		
+		@media $mdPlus
+			grid-template-columns repeat(2, auto)
+			justify-content start
+	
+	&_phone
+		color #B6B6B6
+		font-size 20px
+		
+		@media $smPlus
+			font-size 30px
+			line-height 1.236
+	
+	&_socIcons
+		@media $smPlus
+			margin-right 46px
+		
+		@media $mdPlus
+			margin-right 0
+			margin-left 5px
+	
+	&_map
+		margin-top 45px
+		margin-right -17px
+		margin-left -17px

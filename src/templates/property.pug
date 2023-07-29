@@ -31,7 +31,7 @@ block content
 					.swiper-slide.InfoSwiper_slide
 						.InfoBox.InfoSwiper_item
 							.InfoBox_imgWrapper
-								img(src="/img/infoblocks/people.png" alt="Заключите сделку").InfoBox_img
+								img(src="/img/infoblocks/buying.png" alt="Заключите сделку").InfoBox_img
 							h3.InfoBox_title Заключите сделку
 							.InfoBox_text
 								p Как только сделка будет закрыта, вы сможете перевести сумму через биткоин для покупки выбранной вами недвижимости.
@@ -50,75 +50,12 @@ block content
 						p Свяжитесь с нами через форму заявки или по номеру телефона. Также есть WhatsApp, Telegram, Viber
 				.InfoBox.InfoSection_item
 					.InfoBox_imgWrapper
-						img(src="/img/infoblocks/people.png" alt="Заключите сделку").InfoBox_img
+						img(src="/img/infoblocks/buying.png" alt="Заключите сделку").InfoBox_img
 					h3.InfoBox_title Заключите #[br]сделку
 					.InfoBox_text
 						p Как только сделка будет закрыта, вы сможете перевести сумму через биткоин для покупки выбранной вами недвижимости.
-	.ExchangeRateSection
-		.Container.ExchangeRateSection_container
-			.ExchangeRateSection_text
-				p Актуальный курс #[br]обмена в нашем #[br]Telegram канале
-			a(href="#").BtnBlue.BtnBlue-subscribe.ExchangeRateSection_btn Подписаться
-	.SalesSection
-		.Container
-			.SalesSection_inner
-				.Tabs
-					ul.Tabs_list
-						li.Tabs_item.Tabs_item-active Купить
-						li.Tabs_item Продать
-					.Tabs_container
-						.Tabs_content(style="display: block;")
-							form(action="#").SalesForm
-								.SalesForm_items
-									.SalesForm_item
-										label(for="purchase_amount").SalesForm_label Я хочу заплатить
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="purchase_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="purchase_currency" id="purchase_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-									.SalesForm_item
-										label(for="purchase_result_amount").SalesForm_label Я получу
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="purchase_result_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="purchase_result_currency" id="purchase_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-								.SalesForm_actions
-									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
-									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
-						.Tabs_content
-							form(action="#").SalesForm
-								.SalesForm_items
-									.SalesForm_item
-										label(for="sale_amount").SalesForm_label Я хочу заплатить
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="sale_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="sale_currency" id="sale_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-									.SalesForm_item
-										label(for="sale_result_amount").SalesForm_label Я получу
-										.SalesForm_itemWrapper
-											input(type="number" name="sum" id="sale_result_amount" value="").SalesForm_text
-											.SalesForm_selectWrapper
-												select(name="sale_result_currency" id="sale_result_currency" data-placeholder="------").Select.Select-currencies.SalesForm_select
-													option
-													option(value="usdt" data-icon="/img/currencies/dropdown/tether.png") USDT
-													option(value="bitcoin" data-icon="/img/currencies/dropdown/bitcoin.png") Bitcoin
-													option(value="ethereum" data-icon="/img/currencies/dropdown/ethereum.png") Ethereum
-								.SalesForm_actions
-									button(type="button").BtnBlue.BtnBlue-salesForm.SalesForm_calcBtn Рассчитать
-									button(type="submit").BtnOrange.BtnOrange-salesForm.SalesForm_submitBtn Оставить заявку
+			.InfoSection_btnWrapper
+				a(href="#").BtnOrange.BtnOrange-infoSection.InfoSection_btn Перейти в каталог #[br]недвижимости
 	.ConsultSection
 		.Container
 			h2.ConsultSection_title Остались вопросы? #[br]Получите бесплатную консультацию
