@@ -1,6 +1,7 @@
 import $ from "jquery";
 import select2 from 'select2';
 import Swiper from 'swiper';
+import { Fancybox } from "@fancyapps/ui";
 
 function formatStateResult(state) {
   if (!state.element || !state.element.dataset.icon) {
@@ -66,16 +67,16 @@ $(() => {
     minimumResultsForSearch: -1
   });
 
-  const currencySwiper = new Swiper('.CurrencySwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
+  // const currencySwiper = new Swiper('.CurrencySwiper', {
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 30,
 
-    breakpoints: {
-      768: {
-        spaceBetween: 39
-      }
-    }
-  });
+  //   breakpoints: {
+  //     768: {
+  //       spaceBetween: 39
+  //     }
+  //   }
+  // });
 
   const infoSwiper = new Swiper('.InfoSwiper', {
     slidesPerView: 'auto',
@@ -88,27 +89,27 @@ $(() => {
     }
   });
 
-  const advantagesSwiper = new Swiper('.AdvantagesSwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
+  // const advantagesSwiper = new Swiper('.AdvantagesSwiper', {
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 30,
 
-    breakpoints: {
-      768: {
-        spaceBetween: 36
-      }
-    }
-  });
+  //   breakpoints: {
+  //     768: {
+  //       spaceBetween: 36
+  //     }
+  //   }
+  // });
 
-  const statisticsSwiper = new Swiper('.StatisticsSwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
+  // const statisticsSwiper = new Swiper('.StatisticsSwiper', {
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 30,
 
-    breakpoints: {
-      768: {
-        spaceBetween: 34
-      }
-    }
-  });
+  //   breakpoints: {
+  //     768: {
+  //       spaceBetween: 34
+  //     }
+  //   }
+  // });
 
   $('.MenuHamburger').click(function(event) {
     $('.MobileNavigation').addClass('MobileNavigation-visible');
@@ -138,4 +139,16 @@ $(() => {
       });
     });
   });
+
+  $('.ConsultForm_submitBtn').click(function(e) {
+    Fancybox.show([{
+      src: "#FormResult",
+      type: "inline",
+      closeButton: false,
+    }]);
+
+    e.preventDefault();
+  });
+
+  // console.log(Fancybox);
 });
